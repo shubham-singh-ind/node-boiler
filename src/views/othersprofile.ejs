@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- simplebar styles -->
+    <link rel="stylesheet" href="css/vendor/simplebar.css" />
+    <!-- tiny-slider styles -->
+    <link rel="stylesheet" href="css/vendor/tiny-slider.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Vikinger | Profile</title>
+
+    <style>
+      #profile-header-social-links-slider {
+        display: flex;
+      }
+      .profile-header-social-link {
+        margin-right: 12px;
+      }
+
+      .profile-pic {
+        width: 100%;
+        height: 100%;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        max-width: 100px !important;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+      }
+      .simplebar-content #norequest {
+        padding: 30px;
+      }
+      .sidebar-image {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .coverImage {
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .sidebarCover {
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <% links = { dashboard: '', connections: '', requests: '',
+    notifications: '' } %> <%- include('./reuseables/loader') -%> <%-
+    include('./reuseables/sidenav.ejs', links) -%> <%-
+    include('./reuseables/sidenavMobile.ejs', links) -%> <%-
+    include('./reuseables/header.ejs') -%>
+
+    <!-- CONTENT GRID -->
+    <div class="content-grid">
+      <!-- PROFILE HEADER -->
+      <div class="profile-header">
+        <!-- PROFILE HEADER COVER -->
+        <!-- <figure class="profile-header-cover liquid"> -->
+        <img src="img/cover/01.jpg" class="coverImage" alt="cover-01" />
+        <!-- </figure> -->
+        <!-- /PROFILE HEADER COVER -->
+
+        <!-- PROFILE HEADER INFO -->
+        <div class="profile-header-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description big">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a
+              class="user-short-description-avatar user-avatar big"
+              href="othersprofile"
+            >
+              <!-- USER AVATAR BORDER -->
+              <div class="user-avatar-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-148-164"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR BORDER -->
+
+              <!-- USER AVATAR CONTENT -->
+              <div class="user-avatar-content">
+                <!-- HEXAGON -->
+                <div
+                  class="hexagon-image-100-110 other-profile-image"
+                  data-src=""
+                >
+                  <img
+                    class="profile-pic"
+                    src="img/loader/loader.gif"
+                    alt="profile picture"
+                  />
+                </div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR CONTENT -->
+
+              <!-- USER AVATAR PROGRESS -->
+              <div class="user-avatar-progress">
+                <!-- HEXAGON -->
+                <div class="hexagon-progress-124-136"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS -->
+
+              <!-- USER AVATAR PROGRESS BORDER -->
+              <div class="user-avatar-progress-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-border-124-136"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS BORDER -->
+
+              <!-- USER AVATAR BADGE -->
+              <div class="user-avatar-badge">
+                <!-- USER AVATAR BADGE BORDER -->
+                <div class="user-avatar-badge-border">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-40-44"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE BORDER -->
+
+                <!-- USER AVATAR BADGE CONTENT -->
+                <div class="user-avatar-badge-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-dark-32-34"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE CONTENT -->
+
+                <!-- USER AVATAR BADGE TEXT -->
+                <p class="user-avatar-badge-text" data-profile-completed>0%</p>
+                <!-- /USER AVATAR BADGE TEXT -->
+              </div>
+              <!-- /USER AVATAR BADGE -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a
+              class="user-short-description-avatar user-short-description-avatar-mobile user-avatar medium"
+              href="othersprofile"
+            >
+              <!-- USER AVATAR BORDER -->
+              <div class="user-avatar-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-120-132"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR BORDER -->
+
+              <!-- USER AVATAR CONTENT -->
+              <div class="user-avatar-content">
+                <!-- HEXAGON -->
+                <div
+                  class="hexagon-image-82-90 other-profile-image"
+                  data-src=""
+                >
+                  <img
+                    class="profile-pic"
+                    src="img/loader/loader.gif"
+                    alt="profile picture"
+                  />
+                </div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR CONTENT -->
+
+              <!-- USER AVATAR PROGRESS -->
+              <div class="user-avatar-progress">
+                <!-- HEXAGON -->
+                <div class="hexagon-progress-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS -->
+
+              <!-- USER AVATAR PROGRESS BORDER -->
+              <div class="user-avatar-progress-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-border-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS BORDER -->
+
+              <!-- USER AVATAR BADGE -->
+              <div class="user-avatar-badge">
+                <!-- USER AVATAR BADGE BORDER -->
+                <div class="user-avatar-badge-border">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-32-36"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE BORDER -->
+
+                <!-- USER AVATAR BADGE CONTENT -->
+                <div class="user-avatar-badge-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-dark-26-28"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE CONTENT -->
+
+                <!-- USER AVATAR BADGE TEXT -->
+                <p class="user-avatar-badge-text" data-profile-completed>0%</p>
+                <!-- /USER AVATAR BADGE TEXT -->
+              </div>
+              <!-- /USER AVATAR BADGE -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title">
+              <span data-other-user-name>Ahgosham User</span>
+            </p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
+
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text" data-description></p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- PROFILE HEADER SOCIAL LINKS WRAP -->
+          <div
+            class="profile-header-social-links-wrap"
+            style="display: flex; justify-content: center"
+          >
+            <!-- PROFILE HEADER SOCIAL LINKS -->
+            <div
+              id="profile-header-social-links-slider"
+              class="profile-header-social-links"
+            >
+              <!-- * SOCIAL LINKS WILL GO HERE   -->
+            </div>
+            <!-- /PROFILE HEADER SOCIAL LINKS -->
+
+            <!-- SLIDER CONTROLS -->
+            <div
+              id="profile-header-social-links-slider-controls"
+              class="slider-controls"
+            >
+              <!-- SLIDER CONTROL -->
+              <div class="slider-control left">
+                <!-- SLIDER CONTROL ICON -->
+                <svg class="slider-control-icon icon-small-arrow">
+                  <use xlink:href="#svg-small-arrow"></use>
+                </svg>
+                <!-- /SLIDER CONTROL ICON -->
+              </div>
+              <!-- /SLIDER CONTROL -->
+
+              <!-- SLIDER CONTROL -->
+              <div class="slider-control right">
+                <!-- SLIDER CONTROL ICON -->
+                <svg class="slider-control-icon icon-small-arrow">
+                  <use xlink:href="#svg-small-arrow"></use>
+                </svg>
+                <!-- /SLIDER CONTROL ICON -->
+              </div>
+              <!-- /SLIDER CONTROL -->
+            </div>
+            <!-- /SLIDER CONTROLS -->
+          </div>
+          <!-- /PROFILE HEADER SOCIAL LINKS WRAP -->
+
+          <!-- USER STATS -->
+          <div class="user-stats">
+            <!-- USER STAT -->
+            <div class="user-stat big">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title" data-other-friend-count>82</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">friends</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat big">
+              <!-- USER STAT IMAGE -->
+              <img
+                class="user-stat-image"
+                data-flag
+                src="img/flag/map.png"
+                alt="flag-map"
+                onerror="this.src='img/flag/map.png'"
+              />
+              <!-- /USER STAT IMAGE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text" data-country></p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+          </div>
+          <!-- /USER STATS -->
+
+          <!-- PROFILE HEADER INFO ACTIONS -->
+          <div class="profile-header-info-actions">
+            <!-- PROFILE HEADER INFO ACTION -->
+            <!-- <a class="profile-header-info-action button secondary" href="profile-edit" >
+                Update <span class="hide-text-mobile">Profile</span>
+            </a> -->
+            <!-- /PROFILE HEADER INFO ACTION -->
+          </div>
+          <!-- /PROFILE HEADER INFO ACTIONS -->
+        </div>
+        <!-- /PROFILE HEADER INFO -->
+      </div>
+      <!-- /PROFILE HEADER -->
+
+      <!-- SECTION NAVIGATION -->
+      <nav class="section-navigation">
+        <!-- SECTION MENU -->
+        <div id="section-navigation-slider" class="section-menu">
+          <!-- SECTION MENU ITEM -->
+          <a class="section-menu-item active" href="profile-about">
+            <!-- SECTION MENU ITEM ICON -->
+            <svg class="section-menu-item-icon icon-profile">
+              <use xlink:href="#svg-profile"></use>
+            </svg>
+            <!-- /SECTION MENU ITEM ICON -->
+
+            <!-- SECTION MENU ITEM TEXT -->
+            <p class="section-menu-item-text">About</p>
+            <!-- /SECTION MENU ITEM TEXT -->
+          </a>
+          <!-- /SECTION MENU ITEM -->
+
+          <!-- SECTION MENU ITEM -->
+          <a class="section-menu-item" href="#" id="profile-friends">
+            <!-- SECTION MENU ITEM ICON -->
+            <svg class="section-menu-item-icon icon-friend">
+              <use xlink:href="#svg-friend"></use>
+            </svg>
+            <!-- /SECTION MENU ITEM ICON -->
+
+            <!-- SECTION MENU ITEM TEXT -->
+            <p class="section-menu-item-text">Friends</p>
+            <!-- /SECTION MENU ITEM TEXT -->
+          </a>
+          <!-- /SECTION MENU ITEM -->
+
+          <!-- SECTION MENU ITEM -->
+          <a class="section-menu-item" href="profile-photos">
+            <!-- SECTION MENU ITEM ICON -->
+            <svg class="section-menu-item-icon icon-photos">
+              <use xlink:href="#svg-photos"></use>
+            </svg>
+            <!-- /SECTION MENU ITEM ICON -->
+
+            <!-- SECTION MENU ITEM TEXT -->
+            <p class="section-menu-item-text">Photos</p>
+            <!-- /SECTION MENU ITEM TEXT -->
+          </a>
+          <!-- /SECTION MENU ITEM -->
+        </div>
+        <!-- /SECTION MENU -->
+
+        <!-- SLIDER CONTROLS -->
+        <div id="section-navigation-slider-controls" class="slider-controls">
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control left">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control right">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+        </div>
+        <!-- /SLIDER CONTROLS -->
+      </nav>
+      <!-- /SECTION NAVIGATION -->
+
+      <!-- GRID -->
+      <div class="grid">
+        <!-- GRID COLUMN -->
+        <div class="grid-column">
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX SETTINGS -->
+            <div class="widget-box-settings">
+              <!-- POST SETTINGS WRAP -->
+              <div class="post-settings-wrap">
+                <!-- POST SETTINGS -->
+                <div
+                  class="post-settings widget-box-post-settings-dropdown-trigger"
+                >
+                  <!-- POST SETTINGS ICON -->
+                  <svg class="post-settings-icon icon-more-dots">
+                    <use xlink:href="#svg-more-dots"></use>
+                  </svg>
+                  <!-- /POST SETTINGS ICON -->
+                </div>
+                <!-- /POST SETTINGS -->
+
+                <!-- SIMPLE DROPDOWN -->
+                <div class="simple-dropdown widget-box-post-settings-dropdown">
+                  <!-- SIMPLE DROPDOWN LINK -->
+                  <p class="simple-dropdown-link">Widget Settings</p>
+                  <!-- /SIMPLE DROPDOWN LINK -->
+                </div>
+                <!-- /SIMPLE DROPDOWN -->
+              </div>
+              <!-- /POST SETTINGS WRAP -->
+            </div>
+            <!-- /WIDGET BOX SETTINGS -->
+
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">About Me</p>
+            <!-- /WIDGET BOX TITLE -->
+
+            <!-- WIDGET BOX CONTENT -->
+            <div class="widget-box-content">
+              <!-- PARAGRAPH -->
+              <p class="paragraph" data-description>
+                Hey there! I am a user of Ahgosham
+              </p>
+              <!-- /PARAGRAPH -->
+
+              <!-- INFORMATION LINE LIST -->
+              <div class="information-line-list">
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Joined</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-joined>Not available</p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">City</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-city>Not available</p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Country</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-country>
+                    Not Available
+                  </p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Age</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-age>Not Available</p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Web</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-website></p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+              </div>
+              <!-- /INFORMATION LINE LIST -->
+            </div>
+            <!-- /WIDGET BOX CONTENT -->
+          </div>
+          <!-- /WIDGET BOX -->
+
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX SETTINGS -->
+            <div class="widget-box-settings">
+              <!-- POST SETTINGS WRAP -->
+              <div class="post-settings-wrap">
+                <!-- POST SETTINGS -->
+                <div
+                  class="post-settings widget-box-post-settings-dropdown-trigger"
+                >
+                  <!-- POST SETTINGS ICON -->
+                  <svg class="post-settings-icon icon-more-dots">
+                    <use xlink:href="#svg-more-dots"></use>
+                  </svg>
+                  <!-- /POST SETTINGS ICON -->
+                </div>
+                <!-- /POST SETTINGS -->
+
+                <!-- SIMPLE DROPDOWN -->
+                <div class="simple-dropdown widget-box-post-settings-dropdown">
+                  <!-- SIMPLE DROPDOWN LINK -->
+                  <p class="simple-dropdown-link">Widget Settings</p>
+                  <!-- /SIMPLE DROPDOWN LINK -->
+                </div>
+                <!-- /SIMPLE DROPDOWN -->
+              </div>
+              <!-- /POST SETTINGS WRAP -->
+            </div>
+            <!-- /WIDGET BOX SETTINGS -->
+
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">Personal Info</p>
+            <!-- /WIDGET BOX TITLE -->
+
+            <!-- WIDGET BOX CONTENT -->
+            <div class="widget-box-content">
+              <!-- INFORMATION LINE LIST -->
+              <div class="information-line-list">
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Email</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-email>Not available</p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Birthday</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-dob>Not available</p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Profession</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-profession>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Status</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-marital>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+
+                <!-- INFORMATION LINE -->
+                <div class="information-line">
+                  <!-- INFORMATION LINE TITLE -->
+                  <p class="information-line-title">Birthplace</p>
+                  <!-- /INFORMATION LINE TITLE -->
+
+                  <!-- INFORMATION LINE TEXT -->
+                  <p class="information-line-text" data-address>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION LINE TEXT -->
+                </div>
+                <!-- /INFORMATION LINE -->
+              </div>
+              <!-- /INFORMATION LINE LIST -->
+            </div>
+            <!-- /WIDGET BOX CONTENT -->
+          </div>
+          <!-- /WIDGET BOX -->
+        </div>
+        <!-- /GRID COLUMN -->
+
+        <!-- GRID COLUMN -->
+        <div class="grid-column">
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX SETTINGS -->
+            <div class="widget-box-settings">
+              <!-- POST SETTINGS WRAP -->
+              <div class="post-settings-wrap">
+                <!-- POST SETTINGS -->
+                <div
+                  class="post-settings widget-box-post-settings-dropdown-trigger"
+                >
+                  <!-- POST SETTINGS ICON -->
+                  <svg class="post-settings-icon icon-more-dots">
+                    <use xlink:href="#svg-more-dots"></use>
+                  </svg>
+                  <!-- /POST SETTINGS ICON -->
+                </div>
+                <!-- /POST SETTINGS -->
+
+                <!-- SIMPLE DROPDOWN -->
+                <div class="simple-dropdown widget-box-post-settings-dropdown">
+                  <!-- SIMPLE DROPDOWN LINK -->
+                  <p class="simple-dropdown-link">Widget Settings</p>
+                  <!-- /SIMPLE DROPDOWN LINK -->
+                </div>
+                <!-- /SIMPLE DROPDOWN -->
+              </div>
+              <!-- /POST SETTINGS WRAP -->
+            </div>
+            <!-- /WIDGET BOX SETTINGS -->
+
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">Interests</p>
+            <!-- /WIDGET BOX TITLE -->
+
+            <!-- WIDGET BOX CONTENT -->
+            <div class="widget-box-content">
+              <!-- INFORMATION BLOCK LIST -->
+              <div class="information-block-list">
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Favourite TV Shows</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-tv-shows>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">
+                    Favourite Music Bands / Artists
+                  </p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-music-bands-artists>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Favourite Movies</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-movies>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Favourite Books</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-books>Not available</p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Favourite Games</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-games>Not available</p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Hobbies</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-hobbies>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+
+                <!-- INFORMATION BLOCK -->
+                <div class="information-block">
+                  <!-- INFORMATION BLOCK TITLE -->
+                  <p class="information-block-title">Food Habits</p>
+                  <!-- /INFORMATION BLOCK TITLE -->
+
+                  <!-- INFORMATION BLOCK TEXT -->
+                  <p class="information-block-text" data-food-habits>
+                    Not available
+                  </p>
+                  <!-- /INFORMATION BLOCK TEXT -->
+                </div>
+                <!-- /INFORMATION BLOCK -->
+              </div>
+              <!-- /INFORMATION BLOCK LIST -->
+            </div>
+            <!-- /WIDGET BOX CONTENT -->
+          </div>
+          <!-- /WIDGET BOX -->
+
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX SETTINGS -->
+            <div class="widget-box-settings">
+              <!-- POST SETTINGS WRAP -->
+              <div class="post-settings-wrap">
+                <!-- POST SETTINGS -->
+                <div
+                  class="post-settings widget-box-post-settings-dropdown-trigger"
+                >
+                  <!-- POST SETTINGS ICON -->
+                  <svg class="post-settings-icon icon-more-dots">
+                    <use xlink:href="#svg-more-dots"></use>
+                  </svg>
+                  <!-- /POST SETTINGS ICON -->
+                </div>
+                <!-- /POST SETTINGS -->
+
+                <!-- SIMPLE DROPDOWN -->
+                <div class="simple-dropdown widget-box-post-settings-dropdown">
+                  <!-- SIMPLE DROPDOWN LINK -->
+                  <p class="simple-dropdown-link">Widget Settings</p>
+                  <!-- /SIMPLE DROPDOWN LINK -->
+                </div>
+                <!-- /SIMPLE DROPDOWN -->
+              </div>
+              <!-- /POST SETTINGS WRAP -->
+            </div>
+            <!-- /WIDGET BOX SETTINGS -->
+
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">Jobs &amp; Education</p>
+            <!-- /WIDGET BOX TITLE -->
+
+            <!-- WIDGET BOX CONTENT -->
+            <div class="widget-box-content">
+              <!-- TIMELINE INFORMATION LIST -->
+              <div class="timeline-information-list" id="education-list">
+                <!-- *EDUCATION ITEMS WILL GO HERE -->
+              </div>
+              <!-- /TIMELINE INFORMATION LIST -->
+            </div>
+            <!-- /WIDGET BOX CONTENT -->
+          </div>
+          <!-- /WIDGET BOX -->
+        </div>
+        <!-- /GRID COLUMN -->
+      </div>
+      <!-- /GRID -->
+    </div>
+    <!-- /CONTENT GRID -->
+
+    <%- include('./reuseables/commonIncludes.ejs') -%>
+
+    <!-- JQUERY -->
+    <script src="./myjs/jquery.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="./myjs/main.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="./myjs/logout.js"></script>
+    <!-- MOMENT JS -->
+    <script src="./js/moment/moment.js"></script>
+    <!-- SIDEBAR DATA JS -->
+    <script src="./myjs/sidebardata.js"></script>
+
+    <script>
+      const showPersonalInfo = (data) => {
+        if (data.email) $("[data-email]").text(data.email);
+        if (data.dob) $("[data-dob]").text(moment(data.dob).format("LL"));
+        if (data.profession) $("[data-profession]").text(data.profession);
+        if (data.maritalStatus) $("[data-marital]").text(data.maritalStatus);
+        if (data.address) $("[data-address]").text(data.address);
+        $("[data-age]").text(calculateAge(data.dob) || "Not available");
+        const country = data.country ? data.country.split(" ")[0] : "";
+        $("[data-country]").text(country || "Not available");
+        $("[data-city]").text(data.city || "Not available");
+        $("[data-flag]").attr("src", `img/flag/${country.toLowerCase()}.png`);
+        $("[data-website]").append(
+          data.website
+            ? `<a href="${data.website}">${data.website}</a>`
+            : "Not available"
+        );
+        $("[data-user-website]").append(
+          data.website
+            ? `<a href="${data.website}">${data.website}</a>`
+            : "Not available"
+        );
+      };
+
+      const showInterests = (interests) => {
+        if (!interests) return;
+        const {
+          tvShows,
+          musicBandsArtists,
+          movies,
+          books,
+          games,
+          hobbies,
+          foodHabits,
+        } = interests;
+        if (tvShows) $("[data-tv-shows]").text(tvShows);
+        if (musicBandsArtists)
+          $("[data-music-bands-artists]").text(musicBandsArtists);
+        if (movies) $("[data-movies]").text(movies);
+        if (books) $("[data-books]").text(books);
+        if (games) $("[data-games]").text(games);
+        if (hobbies) $("[data-hobbies]").text(hobbies);
+        if (foodHabits) $("[data-food-habits]").text(foodHabits);
+      };
+
+      const showEducations = (educations) => {
+        if (!educations) return;
+        const educationList = $("#education-list");
+        for (let education of educations) {
+          const item = educationItem(education);
+          educationList.append(item);
+        }
+      };
+
+      const currentUrl = new URL(document.location.href);
+
+      const id = currentUrl.searchParams.get("id");
+
+      $("#profile-friends").click(function (e) {
+        e.preventDefault();
+        document.location.href = `profile-friends?id=${id}`;
+      });
+
+      if (id) {
+        fetchOthersProfile(id).then((data) => {
+          // If not authorized then login else fetch
+          if (data && data.status === ERRORS.AUTH_ERROR) {
+            redirectTo("login");
+          } else if ("code" in data && data.code == 412) {
+            // If profile is incomplete then redirect for its completion
+            window.location.href =
+              "profile-edit?warning=Please complete your profile first";
+          } else {
+            console.log(data);
+            const avatar = data.avatar
+              ? getFullUrl(data.avatar)
+              : "./img/custom/nouser.png";
+            $("[data-other-user-name]").text(data.name);
+            $(".other-profile-image img").attr("src", avatar);
+            const joinedAt = moment(data.createdAt).format("LL");
+            $("[data-joined]").text(joinedAt);
+            $("[data-description]").text(data.description);
+            $("[data-other-friend-count]").text(data.friendCount);
+            showSocialAccounts(data.socialAccounts);
+            showPersonalInfo(data);
+            showInterests(data.interests);
+            showEducations(data.educations);
+          }
+        });
+      } else {
+        redirectTo("myprofile");
+      }
+    </script>
+  </body>
+</html>

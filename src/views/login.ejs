@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Ahgosham | Login/Create Profile</title>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+
+    <style>
+      body {
+        overflow: auto;
+        background: url(./../img/banner/00-\ People\ Illustrations.jpg);
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: center;
+        top: 0;
+        left: 0;
+      }
+      .hint {
+        font-size: small;
+        color: #3e3f5e;
+        position: relative;
+        left: 5px;
+      }
+
+      .landing {
+        background-image: none;
+        /* background: linear-gradient(to right, #123, #12349f);
+        background-attachment: fixed;
+        background-position: center; */
+        background: rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .landing::-webkit-scrollbar {
+        display: none;
+      }
+
+      #problem,
+      #problem-signup {
+        color: red;
+        margin-top: 5px;
+        font-size: 1.4rem;
+        padding: 20px;
+        display: none;
+      }
+
+      #success-signup {
+        color: green;
+        margin-top: 5px;
+        font-size: 1.4rem;
+        padding: 20px;
+        display: none;
+      }
+
+      .form-box .form {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- LANDING -->
+    <div class="landing">
+      <!-- LANDING DECORATION -->
+      <div class="landing-decoration"></div>
+      <!-- /LANDING DECORATION -->
+
+      <!-- LANDING INFO -->
+      <div class="landing-info">
+        <!-- LOGO -->
+        <div class="logo">
+          <!-- ICON LOGO VIKINGER -->
+          <svg class="icon-logo-vikinger">
+            <use xlink:href="#svg-logo-vikinger"></use>
+          </svg>
+          <!-- /ICON LOGO VIKINGER -->
+        </div>
+        <!-- /LOGO -->
+
+        <!-- LANDING INFO PRETITLE -->
+        <h2 class="landing-info-pretitle">Welcome to</h2>
+        <!-- /LANDING INFO PRETITLE -->
+
+        <!-- LANDING INFO TITLE -->
+        <h1 class="landing-info-title">Ahgosham</h1>
+        <!-- /LANDING INFO TITLE -->
+
+        <!-- LANDING INFO TEXT -->
+        <p class="landing-info-text">Where no one is alone anymore!</p>
+        <!-- /LANDING INFO TEXT -->
+
+        <!-- TAB SWITCH -->
+        <div class="tab-switch">
+          <!-- TAB SWITCH BUTTON -->
+          <p class="tab-switch-button login-register-form-trigger">Login</p>
+          <!-- /TAB SWITCH BUTTON -->
+
+          <!-- TAB SWITCH BUTTON -->
+          <p class="tab-switch-button login-register-form-trigger">Register</p>
+          <!-- /TAB SWITCH BUTTON -->
+        </div>
+        <!-- /TAB SWITCH -->
+      </div>
+      <!-- /LANDING INFO -->
+
+      <!-- LANDING FORM -->
+      <div class="landing-form">
+        <!-- LOGIN FORM BOX -->
+        <div class="form-box login-register-form-element">
+          <!-- FORM BOX DECORATION -->
+          <img
+            class="form-box-decoration overflowing"
+            src="img/landing/rocket.png"
+            alt="rocket"
+          />
+          <!-- /FORM BOX DECORATION -->
+
+          <!-- FORM BOX TITLE -->
+          <h2 class="form-box-title" id="login-heading">Account Login</h2>
+          <h2 class="form-box-title" id="problem"></h2>
+          <!-- /FORM BOX TITLE -->
+
+          <!-- FORM -->
+          <form class="form" id="login-form">
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="login-username">Username or Email</label>
+                  <input
+                    type="text"
+                    id="login-username"
+                    name="login_username"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="login-password">Password</label>
+                  <input
+                    type="password"
+                    id="login-password"
+                    name="login_password"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row space-between">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- CHECKBOX WRAP -->
+                <div class="checkbox-wrap">
+                  <input
+                    type="checkbox"
+                    id="login-remember"
+                    name="login_remember"
+                    checked
+                  />
+                  <!-- CHECKBOX BOX -->
+                  <div class="checkbox-box">
+                    <!-- ICON CROSS -->
+                    <svg class="icon-cross">
+                      <use xlink:href="#svg-cross"></use>
+                    </svg>
+                    <!-- /ICON CROSS -->
+                  </div>
+                  <!-- /CHECKBOX BOX -->
+                  <label for="login-remember">Remember Me</label>
+                </div>
+                <!-- /CHECKBOX WRAP -->
+              </div>
+              <!-- /FORM ITEM -->
+
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM LINK -->
+                <a class="form-link" href="#">Forgot Password?</a>
+                <!-- /FORM LINK -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- BUTTON -->
+                <button class="button medium secondary">
+                  Login to your Account!
+                </button>
+                <!-- /BUTTON -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+          </form>
+          <!-- /FORM -->
+
+          <!-- LINED TEXT -->
+          <p class="lined-text">Login with your Social Account</p>
+          <!-- /LINED TEXT -->
+
+          <!-- SOCIAL LINKS -->
+          <div class="social-links">
+            <!-- SOCIAL LINK -->
+            <a class="social-link facebook" id="fbLogin" href="#">
+              <!-- ICON FACEBOOK -->
+              <svg class="icon-facebook">
+                <use xlink:href="#svg-facebook"></use>
+              </svg>
+              <!-- /ICON FACEBOOK -->
+            </a>
+            <!-- /SOCIAL LINK -->
+            <!-- SOCIAL LINK -->
+            <a class="social-link google" id="googleLogin" href="#">
+              <!-- ICON FACEBOOK -->
+              <svg class="icon-google">
+                <use xlink:href="#svg-google"></use>
+              </svg>
+              <!-- /ICON FACEBOOK -->
+            </a>
+            <!-- /SOCIAL LINK -->
+          </div>
+          <!-- /SOCIAL LINKS -->
+        </div>
+        <!-- /LOGIN FORM BOX -->
+
+        <!-- FORM BOX -->
+        <div class="form-box login-register-form-element">
+          <!-- FORM BOX DECORATION -->
+          <img
+            class="form-box-decoration"
+            src="img/landing/rocket.png"
+            alt="rocket"
+          />
+          <!-- /FORM BOX DECORATION -->
+
+          <!-- FORM BOX TITLE -->
+          <h2 class="form-box-title">Create your Profile!</h2>
+          <h2 class="form-box-title" id="problem-signup"></h2>
+          <h2 class="form-box-title" id="success-signup"></h2>
+          <!-- /FORM BOX TITLE -->
+
+          <!-- FORM -->
+          <form class="form" id="register-form">
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <label>Your Date of Birth</label>
+                <div class="form-input">
+                  <input
+                    type="text"
+                    name="register_dob"
+                    id="register-dob"
+                    class="datedropper-init mydob"
+                    data-datedropper
+                  />
+                  <span class="hint">Format DD-MM-YYYY</span>
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="register-email">Your Email</label>
+                  <input
+                    type="text"
+                    id="register-email"
+                    name="register_email"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM SELECT -->
+                <div class="form-select">
+                  <label for="profile-gender">Gender</label>
+                  <select id="profile-gender" name="gender">
+                    <option value="1" selected>Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Choose to not say</option>
+                  </select>
+                  <!-- FORM SELECT ICON -->
+                  <svg class="form-select-icon icon-small-arrow">
+                    <use xlink:href="#svg-small-arrow"></use>
+                  </svg>
+                  <!-- /FORM SELECT ICON -->
+                </div>
+                <!-- /FORM SELECT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="register-name">Name</label>
+                  <input type="text" id="register-name" name="register_name" />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="register-password">Password</label>
+                  <input
+                    type="password"
+                    id="register-password"
+                    name="register_password"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="register-password-repeat">Repeat Password</label>
+                  <input
+                    type="password"
+                    id="register-password-repeat"
+                    name="register_password_repeat"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- CHECKBOX WRAP -->
+                <div class="checkbox-wrap">
+                  <input
+                    type="checkbox"
+                    id="register-newsletter"
+                    name="register_newsletter"
+                    checked
+                  />
+                  <!-- CHECKBOX BOX -->
+                  <div class="checkbox-box">
+                    <!-- ICON CROSS -->
+                    <svg class="icon-cross">
+                      <use xlink:href="#svg-cross"></use>
+                    </svg>
+                    <!-- /ICON CROSS -->
+                  </div>
+                  <!-- /CHECKBOX BOX -->
+                  <label for="register-newsletter"
+                    >Send me news and updates via email</label
+                  >
+                </div>
+                <!-- /CHECKBOX WRAP -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- BUTTON -->
+                <button class="button medium primary" id="register-btn">
+                  Register Now!
+                </button>
+                <!-- /BUTTON -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+          </form>
+          <!-- /FORM -->
+
+          <!-- FORM TEXT -->
+          <!-- <p class="form-text">You'll receive a confirmation email in your inbox with a link to activate your account. If you have any problems, <a href="#">contact us</a>!</p> -->
+          <!-- /FORM TEXT -->
+
+          <!-- LINED TEXT -->
+          <p class="lined-text">Register with your Social Account</p>
+          <!-- /LINED TEXT -->
+
+          <!-- SOCIAL LINKS -->
+          <div class="social-links">
+            <!-- SOCIAL LINK -->
+            <a class="social-link facebook" href="auth/fb">
+              <!-- ICON FACEBOOK -->
+              <svg class="icon-facebook">
+                <use xlink:href="#svg-facebook"></use>
+              </svg>
+              <!-- /ICON FACEBOOK -->
+            </a>
+            <!-- /SOCIAL LINK -->
+            <!-- SOCIAL LINK -->
+            <a class="social-link google" href="#">
+              <!-- ICON google -->
+              <svg class="icon-google">
+                <use xlink:href="#svg-google"></use>
+              </svg>
+              <!-- /ICON google -->
+            </a>
+            <!-- /SOCIAL LINK -->
+          </div>
+          <!-- /SOCIAL LINKS -->
+        </div>
+        <!-- /FORM BOX -->
+      </div>
+      <!-- /LANDING FORM -->
+    </div>
+    <!-- /LANDING -->
+
+    <!-- app -->
+    <script src="js/utils/app.js"></script>
+    <!-- XM_Plugins -->
+    <script src="js/vendor/xm_plugins.min.js"></script>
+    <!-- form.utils -->
+    <script src="js/form/form.utils.js"></script>
+    <!-- landing.tabs -->
+    <script src="js/landing/landing.tabs.js"></script>
+    <!-- SVG icons -->
+    <script src="js/utils/svg-loader.js"></script>
+    <!-- JQUERY -->
+    <script src="myjs/jquery.min.js"></script>
+    <!-- datedropper -->
+    <script src="js/datedropper/datedropper.pro.min.js"></script>
+    <!-- JQUERY VALIDATION -->
+    <script src="myjs/jquery.validation.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="myjs/main.js"></script>
+    <!-- FORMS JS -->
+    <script src="myjs/forms.js"></script>
+
+    <!-- DATE DROPPER CUSTOMS -->
+    <script>
+      const [dd, mm, yyyy] = getDDMMYYYY();
+      const date = `${mm}/${dd}/${yyyy}`;
+      $("#register-dob").dateDropper({
+        format: "d-m-Y",
+        maxDate: date,
+      });
+      const loginHelper = fetchLoginHelper();
+      if (loginHelper) {
+        $('[name="login_username"]').val(loginHelper.username);
+      }
+    </script>
+    <!-- DATE DROPPER CUSTOMS -->
+  </body>
+</html>

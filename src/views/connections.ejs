@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- simplebar styles -->
+    <link rel="stylesheet" href="css/vendor/simplebar.css" />
+    <!-- tiny-slider styles -->
+    <link rel="stylesheet" href="css/vendor/tiny-slider.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Ahgosham | Connections</title>
+
+    <style>
+      #mymap {
+        height: 350px;
+      }
+      .custom-image {
+        border-radius: 50%;
+        margin-top: -5px;
+        height: 90px;
+        width: 100%;
+        object-fit: cover;
+        margin-left: -8px;
+      }
+      .custom-image-list {
+        object-fit: cover;
+        width: 80%;
+        border-radius: 50%;
+        margin-left: -6px;
+        height: 38px;
+      }
+      .custom-image-small {
+        border-radius: 50%;
+        margin-top: -5px;
+        height: 80px;
+        width: 80%;
+        object-fit: cover;
+        margin-left: -5px;
+      }
+      .simplebar-content #norequest {
+        padding: 30px;
+      }
+      .profile-pic {
+        width: 100%;
+        height: 100%;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        max-width: 100px !important;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+      }
+      .sidebar-image {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .coverImage {
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .sidebarCover {
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <% links = { dashboard: '', connections: 'active', requests: '',
+    notifications: '' } %> <%- include('./reuseables/loader') -%> <%-
+    include('./reuseables/sidenav.ejs', links) -%> <%-
+    include('./reuseables/sidenavMobile.ejs', links) -%> <%-
+    include('./reuseables/header.ejs') -%>
+
+    <!-- CONTENT GRID -->
+    <div class="content-grid">
+      <!-- SECTION BANNER -->
+      <div class="section-banner">
+        <!-- SECTION BANNER ICON -->
+        <img
+          class="section-banner-icon"
+          src="img/banner/members-icon.png"
+          alt="members-icon"
+        />
+        <!-- /SECTION BANNER ICON -->
+
+        <!-- SECTION BANNER TITLE -->
+        <p class="section-banner-title">
+          Connections (<span data-friend-count>0</span>)
+        </p>
+        <!-- /SECTION BANNER TITLE -->
+
+        <!-- SECTION BANNER TEXT -->
+        <p class="section-banner-text">
+          Browse all the members of the community!
+        </p>
+        <!-- /SECTION BANNER TEXT -->
+      </div>
+      <!-- /SECTION BANNER -->
+
+      <!-- SECTION FILTERS BAR -->
+      <div class="section-filters-bar v1">
+        <!-- SECTION FILTERS BAR ACTIONS -->
+        <div class="section-filters-bar-actions">
+          <!-- FORM -->
+          <form class="form">
+            <!-- FORM INPUT -->
+            <div class="form-input small with-button">
+              <label for="friends-search">Search Friends</label>
+              <input type="text" id="friends-search" name="friends_search" />
+              <!-- BUTTON -->
+              <button class="button primary">
+                <!-- ICON MAGNIFYING GLASS -->
+                <svg class="icon-magnifying-glass">
+                  <use xlink:href="#svg-magnifying-glass"></use>
+                </svg>
+                <!-- /ICON MAGNIFYING GLASS -->
+              </button>
+              <!-- /BUTTON -->
+            </div>
+            <!-- /FORM INPUT -->
+          </form>
+          <!-- /FORM -->
+        </div>
+        <!-- /SECTION FILTERS BAR ACTIONS -->
+
+        <!-- SECTION FILTERS BAR ACTIONS -->
+        <div class="section-filters-bar-actions">
+          <!-- VIEW ACTIONS -->
+          <div class="view-actions">
+            <!-- VIEW ACTION -->
+            <div
+              class="view-action text-tooltip-tft-medium active"
+              data-title="Big Grid"
+              id="big-grid"
+            >
+              <!-- VIEW ACTION ICON -->
+              <svg class="view-action-icon icon-big-grid-view">
+                <use xlink:href="#svg-big-grid-view"></use>
+              </svg>
+              <!-- /VIEW ACTION ICON -->
+            </div>
+            <!-- /VIEW ACTION -->
+
+            <!-- VIEW ACTION -->
+            <div
+              class="view-action text-tooltip-tft-medium"
+              data-title="Small Grid"
+              id="small-grid"
+            >
+              <!-- VIEW ACTION ICON -->
+              <svg class="view-action-icon icon-small-grid-view">
+                <use xlink:href="#svg-small-grid-view"></use>
+              </svg>
+              <!-- /VIEW ACTION ICON -->
+            </div>
+            <!-- /VIEW ACTION -->
+
+            <!-- VIEW ACTION -->
+            <div
+              class="view-action text-tooltip-tft-medium"
+              data-title="List"
+              id="list"
+            >
+              <!-- VIEW ACTION ICON -->
+              <svg class="view-action-icon icon-list-grid-view">
+                <use xlink:href="#svg-list-grid-view"></use>
+              </svg>
+              <!-- /VIEW ACTION ICON -->
+            </div>
+            <!-- /VIEW ACTION -->
+          </div>
+          <!-- /VIEW ACTIONS -->
+        </div>
+        <!-- /SECTION FILTERS BAR ACTIONS -->
+      </div>
+      <!-- /SECTION FILTERS BAR -->
+
+      <!-- !GRID -->
+      <!-- GRID -->
+      <div class="grid grid-4-4-4 centered" id="connection-grid">
+        <!-- *OTHER FRIENDS CONNECTIONS AT PROFILE WILL GO HERE -->
+      </div>
+      <!-- /GRID -->
+
+      <!-- GRID -->
+      <div class="grid grid-3-3-3 centered" id="connection-grid-small">
+        <!-- *OTHER FRIENDS CONNECTIONS AT PROFILE WILL GO HERE -->
+      </div>
+      <!-- /GRID -->
+
+      <!-- GRID -->
+      <div class="grid" id="connection-grid-list">
+        <!-- *OTHER FRIENDS CONNECTIONS AT PROFILE WILL GO HERE -->
+      </div>
+      <!-- /GRID -->
+
+      <!-- SECTION PAGER BAR -->
+      <div class="section-pager-bar">
+        <!-- SECTION PAGER -->
+        <div class="section-pager">
+          <!-- *PAGER (1/2/3/4...) WILL GO HERE -->
+        </div>
+        <!-- /SECTION PAGER -->
+
+        <!-- SECTION PAGER CONTROLS -->
+        <div class="section-pager-controls">
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control left disabled">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control right">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+        </div>
+        <!-- /SECTION PAGER CONTROLS -->
+      </div>
+      <!-- /SECTION PAGER BAR -->
+      <!-- !/GRID -->
+    </div>
+    <!-- /CONTENT GRID -->
+
+    <%- include('./reuseables/commonIncludes.ejs') -%>
+
+    <!-- JQUERY -->
+    <script src="myjs/jquery.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="myjs/main.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="myjs/logout.js"></script>
+    <!-- SIDEBAR DATA JS -->
+    <script src="myjs/sidebardata.js"></script>
+
+    <script>
+      var itemsPerPage = 10;
+
+      $("#big-grid").click(function (e) {
+        e.preventDefault();
+        $("#connection-grid-list").hide();
+        $("#connection-grid-small").hide();
+        $("#connection-grid").show();
+        $(this).addClass("active");
+        $("#small-grid").removeClass("active");
+        $("#list").removeClass("active");
+      });
+      $("#small-grid").click(function (e) {
+        e.preventDefault();
+        $("#connection-grid").hide();
+        $("#connection-grid-list").hide();
+        $("#connection-grid-small").show();
+        $(this).addClass("active");
+        $("#big-grid").removeClass("active");
+        $("#list").removeClass("active");
+      });
+      $("#list").click(function (e) {
+        e.preventDefault();
+        $("#connection-grid").hide();
+        $("#connection-grid-small").hide();
+        $("#connection-grid-list").show();
+        $(this).addClass("active");
+        $("#small-grid").removeClass("active");
+        $("#big-grid").removeClass("active");
+      });
+
+      fetchConnectionCount().then((data) => {
+        // If not authorized then login else fetch
+        if (data && data.status === ERRORS.AUTH_ERROR) {
+          redirectTo("login");
+        } else {
+          const count = data ? data.count : 0;
+          $("[data-friend-count]").text(count);
+          const sectionPager = $(".section-pager");
+          const pages = Math.ceil(count / itemsPerPage);
+          for (let i = 1; i <= pages; i++) {
+            const pager = pagerUI(i);
+            sectionPager.append(pager);
+          }
+          $(".page").on("click", function (e) {
+            const pageNumber =
+              e.target.innerHTML[0] === "0"
+                ? e.target.innerHTML[1]
+                : e.target.innerHTML;
+            console.log(pageNumber);
+            fetchConnections(pageNumber);
+          });
+        }
+      });
+
+      const fetchConnections = (pageNumber = 1) => {
+        fetchMyConnections(pageNumber, itemsPerPage).then((data) => {
+          // If not authorized then login else fetch
+          if (data && data.status === ERRORS.AUTH_ERROR) {
+            redirectTo("login");
+          } else {
+            if (data && data.length) {
+              $("#connection-grid-list").hide();
+              $("#connection-grid-small").hide();
+              $("#connection-grid").show();
+              showConnections(data);
+              showConnections(data, true);
+              showConnections(data, false, true);
+            } else {
+              $(".section-filters-bar").hide();
+              $(".section-pager-bar").hide();
+              $(".section-banner-title").text("No connections");
+            }
+          }
+        });
+      };
+
+      fetchConnections();
+    </script>
+  </body>
+</html>

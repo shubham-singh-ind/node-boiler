@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- simplebar styles -->
+    <link rel="stylesheet" href="css/vendor/simplebar.css" />
+    <!-- tiny-slider styles -->
+    <link rel="stylesheet" href="css/vendor/tiny-slider.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <!-- LEAFLET CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- LEAFLET JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- WOW ANIMATE EFFECT -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script src="js/wow/wow.js"></script>
+
+    <script src="js/chart/chart.min.js"></script>
+    <script src="myjs/chartutil.js"></script>
+
+    <title>Ahgosham | Overview</title>
+
+    <script>
+      if (window.location.hash && window.location.hash == "#_=_") {
+        window.location.hash = "";
+      }
+    </script>
+
+    <style>
+      #mymap {
+        height: 350px;
+      }
+      .custom-image {
+        border-radius: 50%;
+        margin-top: -5px;
+        height: 90px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .profile-pic {
+        width: 100%;
+        height: 100%;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        max-width: 100px !important;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+      }
+
+      .section-banner-title img {
+        height: 35px;
+      }
+
+      .simplebar-content #norequest {
+        padding: 30px;
+      }
+      .sidebar-image {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .social-links {
+        justify-content: space-evenly;
+      }
+      .coverImage {
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .sidebarCover {
+        height: 150px;
+      }
+
+      td,
+      th {
+        font-family: Rajdhani, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <% links = { dashboard: 'active', connections: '', requests: '',
+    notifications: '' } %> <%- include('./reuseables/loader') -%> <%-
+    include('./reuseables/sidenav.ejs', links) -%> <%-
+    include('./reuseables/sidenavMobile.ejs', links) -%> <%-
+    include('./reuseables/header.ejs') -%>
+
+    <!-- CONTENT GRID -->
+    <div class="content-grid">
+      <!-- SLIDER LINE -->
+      <div class="slider-line">
+        <!-- SLIDER CONTROLS -->
+        <div id="stat-block-slider-controls" class="slider-controls">
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control left">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+
+          <!-- SLIDER CONTROL -->
+          <div class="slider-control right">
+            <!-- SLIDER CONTROL ICON -->
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+            <!-- /SLIDER CONTROL ICON -->
+          </div>
+          <!-- /SLIDER CONTROL -->
+        </div>
+        <!-- /SLIDER CONTROLS -->
+        <!-- SLIDER SLIDES -->
+        <div id="stat-block-slider" class="slider-slides">
+          <!-- SLIDER SLIDE -->
+          <div class="slider-slide">
+            <!-- STAT BLOCK -->
+            <div class="stat-block">
+              <!-- STAT BLOCK DECORATION -->
+              <div class="stat-block-decoration">
+                <!-- ICON LOGIN -->
+                <svg class="icon-login">
+                  <use xlink:href="#svg-login"></use>
+                </svg>
+                <!-- /ICON LOGIN -->
+              </div>
+              <!-- /STAT BLOCK DECORATION -->
+
+              <!-- STAT BLOCK INFO -->
+              <div class="stat-block-info">
+                <!-- STAT BLOCK TITLE -->
+                <p class="stat-block-title">Last Login</p>
+                <!-- /STAT BLOCK TITLE -->
+
+                <!-- STAT BLOCK TEXT -->
+                <p class="stat-block-text" data-last-login>0 Days Ago</p>
+                <!-- /STAT BLOCK TEXT -->
+              </div>
+              <!-- /STAT BLOCK INFO -->
+            </div>
+            <!-- /STAT BLOCK -->
+          </div>
+          <!-- /SLIDER SLIDE -->
+          <!-- SLIDER SLIDE -->
+          <div class="slider-slide">
+            <!-- STAT BLOCK -->
+            <div class="stat-block">
+              <!-- STAT BLOCK DECORATION -->
+              <div class="stat-block-decoration">
+                <!-- STAT BLOCK DECORATION ICON -->
+                <svg class="stat-block-decoration-icon icon-friend">
+                  <use xlink:href="#svg-friend"></use>
+                </svg>
+                <!-- /STAT BLOCK DECORATION ICON -->
+              </div>
+              <!-- /STAT BLOCK DECORATION -->
+
+              <!-- STAT BLOCK INFO -->
+              <div class="stat-block-info">
+                <!-- STAT BLOCK TITLE -->
+                <p class="stat-block-title">Last friend added</p>
+                <!-- /STAT BLOCK TITLE -->
+
+                <!-- STAT BLOCK TEXT -->
+                <p class="stat-block-text" data-last-friend>0 Days Ago</p>
+                <!-- /STAT BLOCK TEXT -->
+              </div>
+              <!-- /STAT BLOCK INFO -->
+            </div>
+            <!-- /STAT BLOCK -->
+          </div>
+          <!-- /SLIDER SLIDE -->
+        </div>
+        <!-- SLIDER SLIDES -->
+      </div>
+      <!-- SLIDER LINE -->
+
+      <!-- SECTION BANNER -->
+      <div class="section-banner">
+        <!-- SECTION BANNER ICON -->
+        <img
+          class="section-banner-icon"
+          src="img/banner/groups-icon.png"
+          alt="overview-icon"
+        />
+        <!-- /SECTION BANNER ICON -->
+
+        <!-- SECTION BANNER TITLE -->
+        <p class="section-banner-title">
+          Welcome <span data-user-name></span>!
+          <img src="img/custom/rocket.png" alt="😃" />
+        </p>
+        <!-- /SECTION BANNER TITLE -->
+
+        <!-- SECTION BANNER TITLE -->
+        <p class="section-banner-title" data-dob="dob">Dashboard</p>
+        <!-- /SECTION BANNER TITLE -->
+      </div>
+      <!-- /SECTION BANNER -->
+
+      <!-- GRID COLUMN -->
+      <div class="grid-column">
+        <!-- WIDGET BOX -->
+        <div class="widget-box">
+          <!-- WIDGET BOX ACTIONS -->
+          <div class="widget-box-actions">
+            <!-- WIDGET BOX ACTION -->
+            <div class="widget-box-action">
+              <!-- WIDGET BOX TITLE -->
+              <p class="widget-box-title" style="font-size: 1.5rem">
+                <span
+                  data-world-count
+                  style="font-size: 2rem; color: #615dfa"
+                ></span>
+                People all over the world
+              </p>
+              <!-- /WIDGET BOX TITLE -->
+            </div>
+            <!-- /WIDGET BOX ACTION -->
+
+            <!-- WIDGET BOX ACTION -->
+            <div class="widget-box-action">
+              <!-- FORM SELECT -->
+              <div class="form-select v2">
+                <!-- <select id="visits-map-date" name="visits_map_date">
+                    <option value="0">September 2019</option>
+                    <option value="1">November 2019</option>
+                  </select> -->
+                <!-- FORM SELECT ICON -->
+                <svg class="form-select-icon icon-small-arrow">
+                  <use xlink:href="#svg-small-arrow"></use>
+                </svg>
+                <!-- /FORM SELECT ICON -->
+              </div>
+              <!-- /FORM SELECT -->
+            </div>
+            <!-- /WIDGET BOX ACTION -->
+          </div>
+          <!-- /WIDGET BOX ACTIONS -->
+
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content">
+            <!-- FULL WIDTH IMAGE -->
+            <div class="world-map" id="mymap"></div>
+            <!-- /FULL WIDTH IMAGE -->
+          </div>
+          <!-- WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+      </div>
+      <!-- /GRID COLUMN -->
+
+      <!-- SECTION HEADER -->
+      <div class="section-header">
+        <!-- SECTION HEADER INFO -->
+        <div class="section-header-info">
+          <!-- SECTION PRETITLE -->
+          <p class="section-pretitle">Overview</p>
+          <!-- /SECTION PRETITLE -->
+
+          <!-- SECTION TITLE -->
+          <h2 class="section-title">Stats</h2>
+          <!-- /SECTION TITLE -->
+        </div>
+        <!-- /SECTION HEADER INFO -->
+      </div>
+      <!-- /SECTION HEADER -->
+
+      <!-- GRID -->
+      <div class="grid">
+        <!-- GRID -->
+        <div class="grid grid-3-3-3-3 centered">
+          <!-- ACCOUNT STAT BOX -->
+          <div class="account-stat-box account-stat-session-duration">
+            <!-- ACCOUNT STAT BOX ICON WRAP -->
+            <div class="account-stat-box-icon-wrap">
+              <!-- ACCOUNT STAT BOX ICON -->
+              <svg class="account-stat-box-icon icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+              <!-- /ACCOUNT STAT BOX ICON -->
+            </div>
+            <!-- /ACCOUNT STAT BOX ICON WRAP -->
+
+            <!-- ACCOUNT STAT BOX TITLE -->
+            <p class="account-stat-box-title" data-all-users>0</p>
+            <!-- /ACCOUNT STAT BOX TITLE -->
+
+            <!-- ACCOUNT STAT BOX SUBTITLE -->
+            <p class="account-stat-box-subtitle">Users All Over The World</p>
+            <!-- /ACCOUNT STAT BOX SUBTITLE -->
+
+            <!-- ACCOUNT STAT BOX TEXT -->
+            <p class="account-stat-box-text">
+              Birth Date : <span data-dob="dob"></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX TEXT -->
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+
+          <!-- ACCOUNT STAT BOX -->
+          <div class="account-stat-box account-stat-visits">
+            <!-- ACCOUNT STAT BOX ICON WRAP -->
+            <div class="account-stat-box-icon-wrap">
+              <!-- ACCOUNT STAT BOX ICON -->
+              <svg class="account-stat-box-icon icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+              <!-- /ACCOUNT STAT BOX ICON -->
+            </div>
+            <!-- /ACCOUNT STAT BOX ICON WRAP -->
+
+            <!-- ACCOUNT STAT BOX TITLE -->
+            <p class="account-stat-box-title" data-country-count>0</p>
+            <!-- /ACCOUNT STAT BOX TITLE -->
+
+            <!-- ACCOUNT STAT BOX SUBTITLE -->
+            <p class="account-stat-box-subtitle">
+              Users In <span data-country></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX SUBTITLE -->
+
+            <!-- ACCOUNT STAT BOX TEXT -->
+            <p class="account-stat-box-text">
+              Birth Date : <span data-dob="dob"></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX TEXT -->
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+
+          <!-- ACCOUNT STAT BOX -->
+          <div class="account-stat-box account-stat-active-users">
+            <!-- ACCOUNT STAT BOX ICON WRAP -->
+            <div class="account-stat-box-icon-wrap">
+              <!-- ACCOUNT STAT BOX ICON -->
+              <svg class="account-stat-box-icon icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+              <!-- /ACCOUNT STAT BOX ICON -->
+            </div>
+            <!-- /ACCOUNT STAT BOX ICON WRAP -->
+
+            <!-- ACCOUNT STAT BOX TITLE -->
+            <p class="account-stat-box-title" data-state-count>0</p>
+            <!-- /ACCOUNT STAT BOX TITLE -->
+
+            <!-- ACCOUNT STAT BOX SUBTITLE -->
+            <p class="account-stat-box-subtitle">
+              Users In <span data-state></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX SUBTITLE -->
+
+            <!-- ACCOUNT STAT BOX TEXT -->
+            <p class="account-stat-box-text">
+              Birth Date : <span data-dob="dob"></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX TEXT -->
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+          <!-- ACCOUNT STAT BOX -->
+          <div class="account-stat-box account-stat-session-duration">
+            <!-- ACCOUNT STAT BOX ICON WRAP -->
+            <div class="account-stat-box-icon-wrap">
+              <!-- ACCOUNT STAT BOX ICON -->
+              <svg class="account-stat-box-icon icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+              <!-- /ACCOUNT STAT BOX ICON -->
+            </div>
+            <!-- /ACCOUNT STAT BOX ICON WRAP -->
+
+            <!-- ACCOUNT STAT BOX TITLE -->
+            <p class="account-stat-box-title" data-city-count>0</p>
+            <!-- /ACCOUNT STAT BOX TITLE -->
+
+            <!-- ACCOUNT STAT BOX SUBTITLE -->
+            <p class="account-stat-box-subtitle">
+              Users In <span data-city></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX SUBTITLE -->
+
+            <!-- ACCOUNT STAT BOX TEXT -->
+            <p class="account-stat-box-text">
+              Birth Date : <span data-dob="dob"></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX TEXT -->
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+
+          <!-- ACCOUNT STAT BOX -->
+          <div
+            class="account-stat-box account-stat-active-users"
+            style="height: 100%; display: flex; align-items: center"
+            id="gender-chart"
+          >
+            <div id="canvas-holder" style="width: 100%">
+              <canvas id="chart-area"></canvas>
+            </div>
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+
+          <!-- ACCOUNT STAT BOX -->
+          <div class="account-stat-box account-stat-active-users">
+            <!-- ACCOUNT STAT BOX ICON WRAP -->
+            <div class="account-stat-box-icon-wrap">
+              <!-- ACCOUNT STAT BOX ICON -->
+              <svg class="account-stat-box-icon icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+              <!-- /ACCOUNT STAT BOX ICON -->
+            </div>
+            <!-- /ACCOUNT STAT BOX ICON WRAP -->
+
+            <!-- ACCOUNT STAT BOX TITLE -->
+            <p class="account-stat-box-title" data-connects>0</p>
+            <!-- /ACCOUNT STAT BOX TITLE -->
+
+            <!-- ACCOUNT STAT BOX SUBTITLE -->
+            <p class="account-stat-box-subtitle">Users Connected</p>
+            <!-- /ACCOUNT STAT BOX SUBTITLE -->
+
+            <!-- ACCOUNT STAT BOX TEXT -->
+            <p class="account-stat-box-text">
+              Birth Date : <span data-dob="dob"></span>
+            </p>
+            <!-- /ACCOUNT STAT BOX TEXT -->
+          </div>
+          <!-- /ACCOUNT STAT BOX -->
+        </div>
+        <!-- /GRID -->
+      </div>
+      <!-- /GRID -->
+
+      <!-- LEADERBOARD -->
+      <!-- GRID -->
+      <div class="grid grid-9-3 stretched">
+        <!-- GRID COLUMN -->
+        <div class="grid-column">
+          <!-- WIDGET BOX -->
+          <div class="widget-box">
+            <!-- WIDGET BOX TITLE -->
+            <p class="widget-box-title">LEADERBOARD</p>
+            <!-- /WIDGET BOX TITLE -->
+            <table class="table">
+              <thead>
+                <th class="bold">#</th>
+                <th class="bold">Birthday</th>
+                <th class="bold">Total Users</th>
+                <th class="bold">Connected Users</th>
+              </thead>
+              <tbody id="leaderboard">
+                <!-- LEADERBOARD ITEMS WILL COME DYNAMICALLY HERE -->
+              </tbody>
+            </table>
+          </div>
+          <!-- /WIDGET BOX -->
+        </div>
+        <!-- /GRID COLUMN -->
+      </div>
+      <!-- /GRID -->
+
+      <!-- /LEADERBOARD -->
+
+      <!-- SECTION FILTERS BAR -->
+      <div class="section-filters-bar v1">
+        <!-- SECTION FILTERS BAR ACTIONS -->
+        <div class="section-filters-bar-actions">
+          <!-- FORM -->
+          <form class="form">
+            <!-- FORM INPUT -->
+            <div class="form-input small with-button">
+              <label for="friends-search">Search Friends</label>
+              <input type="text" id="friends-search" name="friends_search" />
+              <!-- BUTTON -->
+              <button class="button primary">
+                <!-- ICON MAGNIFYING GLASS -->
+                <svg class="icon-magnifying-glass">
+                  <use xlink:href="#svg-magnifying-glass"></use>
+                </svg>
+                <!-- /ICON MAGNIFYING GLASS -->
+              </button>
+              <!-- /BUTTON -->
+            </div>
+            <!-- /FORM INPUT -->
+          </form>
+          <!-- /FORM -->
+        </div>
+        <!-- /SECTION FILTERS BAR ACTIONS -->
+      </div>
+      <!-- /SECTION FILTERS BAR -->
+
+      <!-- GRID -->
+      <div class="grid grid-4-4-4 centered" id="user-grid"></div>
+      <!-- /GRID -->
+    </div>
+    <!-- /CONTENT GRID -->
+
+    <%- include('./reuseables/commonIncludes.ejs') -%>
+
+    <!-- GOOGLE MAP -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TLe_5fP2B85oU9mvzNnJbN6QuHjdjHE&libraries=places"
+      defer
+    ></script>
+
+    <!-- LOGOUT JS -->
+    <script src="js/moment/moment.js"></script>
+    <!-- JQUERY -->
+    <script src="myjs/jquery.min.js"></script>
+    <!-- Custom JS -->
+    <script src="myjs/main.js"></script>
+    <!-- MAP Util JS -->
+    <script src="myjs/map.js"></script>
+    <!-- LOGOUT JS -->
+    <script src="myjs/logout.js"></script>
+    <!-- SIDEBAR DATA JS -->
+    <!-- <script src="./myjs/sidebardata.js"></script> -->
+    <!-- SOCKET IO -->
+    <script src="js/socketio/index.js"></script>
+
+    <!-- my calls -->
+    <script>
+      new WOW().init();
+      $(function () {
+        initMap();
+        let isLogin = false;
+        // If not logged in, redirect to loginot make account first before any operation
+        $("body").on("click", function () {
+          if (!isLogin) {
+            checkLoginStatus().then((data) => {
+              if (!data) document.location.href = "login";
+              else isLogin = true;
+            });
+          }
+        });
+      });
+      /**
+       * @param - event (e)
+       * Prompt user to login/register if not
+       */
+      const socket = io("http://localhost:9000/");
+      socket.on("login", (m) => console.log(m));
+      // function onMapClick(e) {
+      //   checkLoginStatus().then((data) => {
+      //     if (!data) document.location.href = "login";
+      //   });
+      // }
+
+      getLatLon((err, result) => {
+        if (result) {
+          getAddressDetails(result[0], result[1], (err, res) => {
+            $("[data-country]").text(res.country);
+            $("[data-state]").text(res.state);
+            $("[data-city]").text(res.city);
+            // Location counters
+            dob = fetchDob();
+            fetchLocationCounts(
+              res.country || "",
+              res.state || "",
+              res.city || "",
+              dob || ""
+            ).then((data) => {
+              $("[data-country-count]").text(data.countryCount || 0);
+              $("[data-state-count]").text(data.stateCount || 0);
+              $("[data-city-count]").text(data.cityCount || 0);
+            });
+          });
+        }
+      });
+      //   mymap.on("click", onMapClick);
+
+      let page = 1;
+      let perPage = 10;
+      checkLoginStatus().then((data) => {
+        if (data === true) {
+          // Fetch suggestions
+          fetchSuggestions(page, perPage).then((myusers) => {
+            const total = myusers.total;
+            const users = myusers.data;
+            const { maleCount, femaleCount } = myusers;
+
+            $("[data-world-count]").text(total);
+            $("[data-all-users]").text(total);
+            showPieChart(maleCount, femaleCount);
+            if (users && users.length) {
+              showUsersToConnect(users);
+            } else {
+              $("#user-grid").append("<p>No more suggestion available.</p>");
+              page = 0;
+            }
+          });
+
+          // Infinite scroll
+          const infiniteScroll = () => {
+            let isFetching = false;
+            if (checkIfAtBottom()) {
+              // add something end of page
+              if (page > 0 && !isFetching) {
+                page++;
+                isFetching = true;
+                $("#user-grid").append(loader);
+                fetchSuggestions(page, perPage).then((myusers) => {
+                  $("#user-grid .loader-bars").remove();
+                  const users = myusers.data;
+                  if (users && users.length) {
+                    showUsersToConnect(users);
+                  } else {
+                    page = 0;
+                    $("#user-grid .loader-bars").remove();
+                    $("#user-grid").append(
+                      "<p>No more suggestion available.</p>"
+                    );
+                  }
+                  isFetching = false;
+                });
+              }
+            }
+          };
+          $(window).on("scroll", infiniteScroll); // DESKTOP
+          $("html,body").on("touchmove", infiniteScroll); // TOUCH MOBILE
+
+          // Common data
+          fetchCommonData().then((data) => {
+            // If not authorized then login else fetch
+            let avatar = data.avatar
+              ? getFullUrl(data.avatar)
+              : "img/custom/nouser.png";
+            let cover = data.cover
+              ? getFullUrl(data.cover)
+              : "img/custom/nocover.png";
+            if (data && data.status === ERRORS.AUTH_ERROR) {
+              redirectTo("login");
+            } else {
+              $(".profile-image img").attr("src", avatar);
+              $(".coverImage").attr("src", cover);
+              $("[data-profile-completed]").text(
+                Math.round(data.profilePercentage) + "%"
+              );
+              $("[data-user-name]").text(data.name);
+              $("title").text("Welcome " + data.name);
+              $("[data-connects]").text(data.connectionCount);
+              $("[data-username]").text("@" + data.username);
+              $("[data-description]").text(data.description);
+              $("[data-last-login]").text(
+                data.lastLogin
+                  ? moment(data.lastLogin).calendar()
+                  : "It's Your First Time 😄"
+              );
+            }
+          });
+        } else {
+          // *NOT LOGGED IN
+          $(".sidemenu-trigger").hide();
+          fetchUsers(page, perPage).then((myusers) => {
+            const total = myusers.total;
+            const users = myusers.data;
+            const { maleCount, femaleCount } = myusers;
+
+            $("[data-world-count]").text(total);
+            $("[data-all-users]").text(total);
+            showPieChart(maleCount, femaleCount);
+            if (users && users.length) {
+              showUsersToConnect(users);
+            } else {
+              $("#user-grid").append("<p>No suggestion available.</p>");
+              page = 0;
+            }
+          });
+
+          // Infinite scroll
+          const infiniteScroll = () => {
+            let isFetching = false;
+            if (checkIfAtBottom()) {
+              // add something end of page
+              if (page > 0 && !isFetching) {
+                page++;
+                let isFetching = true;
+                $("#user-grid").append(loader);
+                fetchUsers(page, perPage).then((myusers) => {
+                  $("#user-grid .loader-bars").remove();
+                  const users = myusers.data;
+                  if (users && users.length) {
+                    showUsersToConnect(users);
+                  } else {
+                    // Stop fetching more
+                    page = 0;
+                    $("#user-grid").append("<p>No suggestion available.</p>");
+                  }
+                  isFetching = false;
+                });
+              }
+            }
+          };
+          $(window).on("scroll", infiniteScroll); // DESKTOP
+          $("html,body").on("touchmove", infiniteScroll); // TOUCH MOBILE
+        }
+      });
+
+      // LOAD LEADERBOARD
+      fetchLeaderboard().then((leaderboard) => {
+        leaderboard.forEach((item, i) => {
+          $("#leaderboard").append(`
+                <tr>
+                  <td>${i + 1}</td>
+                  <td>${moment(item.dob).format("MMM Do YY")}</td>
+                  <td>${item.total}</td>
+                  <td>${item.connects}</td>
+                </tr>
+              `);
+        });
+      });
+    </script>
+    <!-- my calls -->
+  </body>
+</html>

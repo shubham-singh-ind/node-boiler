@@ -1,0 +1,203 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "dob": "06-09-2020",
+      "name": "Shubham Singh",
+      "email": "1shubh.singh.it@gmail.com",
+      "password": "sldfj78dsf",
+      "social": {
+        "facebook": "1https://www.facebook.com/iamshubhsingh/",
+        "linkedin": "1https://www.linkedin.com/in/shubham-singh-er/",
+        "twitter": "1https://twitter.com/Shubham47880959"
+      },
+      "lat": 22.9734229,
+      "long": 78.6568942,
+      "photo": "1https://pbs.twimg.com/profile_images/1287709234017087488/XPfYWMFm_400x400.jpg",
+      "gender": "m",
+      "profession": "1Software Enginner",
+      "maritalStatus": "0y",
+      "income": 90000,
+      "education": {
+        "highSchool": "01/02/2014",
+        "inter": "01/02/2015",
+        "ug": "01/02/2016",
+        "pg": "01/02/2020"
+      },
+      "foodHabits": [],
+      "pets": [],
+      "socialWelfare": [],
+      "volunteer": "",
+      "music": [],
+      "registeredAt": "01/08/2020",
+      "updatedAt": "01/08/2020"
+    },
+    {
+      "id": 2,
+      "dob": "06-09-2020",
+      "name": "Shubham Singh",
+      "email": "1shubh.singh.it@gmail.com",
+      "password": "sldfj78dsf",
+      "social": {
+        "facebook": "1https://www.facebook.com/iamshubhsingh/",
+        "linkedin": "1https://www.linkedin.com/in/shubham-singh-er/",
+        "twitter": "1https://twitter.com/Shubham47880959"
+      },
+      "lat": 19.1122,
+      "long": -37.00831,
+      "photo": "1https://pbs.twimg.com/profile_images/1287709234017087488/XPfYWMFm_400x400.jpg",
+      "gender": "m",
+      "profession": "1Software Enginner",
+      "maritalStatus": "0y",
+      "income": 90000,
+      "education": {
+        "highSchool": "01/02/2014",
+        "inter": "01/02/2015",
+        "ug": "01/02/2016",
+        "pg": "01/02/2020"
+      },
+      "foodHabits": [],
+      "pets": [],
+      "socialWelfare": [],
+      "volunteer": "",
+      "music": [],
+      "registeredAt": "01/08/2020",
+      "updatedAt": "01/08/2020"
+    },
+    {
+      "id": 3,
+      "dob": "16/12/1997",
+      "name": "Shubham Singh",
+      "email": "1shubh.singh.it@gmail.com",
+      "password": "sldfj78dsf",
+      "social": {
+        "facebook": "1https://www.facebook.com/iamshubhsingh/",
+        "linkedin": "1https://www.linkedin.com/in/shubham-singh-er/",
+        "twitter": "1https://twitter.com/Shubham47880959"
+      },
+      "lat": -46.71096,
+      "long": 144.15425,
+      "photo": "1https://pbs.twimg.com/profile_images/1287709234017087488/XPfYWMFm_400x400.jpg",
+      "gender": "m",
+      "profession": "1Software Enginner",
+      "maritalStatus": "0y",
+      "income": 90000,
+      "education": {
+        "highSchool": "01/02/2014",
+        "inter": "01/02/2015",
+        "ug": "01/02/2016",
+        "pg": "01/02/2020"
+      },
+      "foodHabits": [],
+      "pets": [],
+      "socialWelfare": [],
+      "volunteer": "",
+      "music": [],
+      "registeredAt": "01/08/2020",
+      "updatedAt": "01/08/2020"
+    },
+    {
+      "id": 4,
+      "dob": "16/12/1997",
+      "name": "Shubham Singh",
+      "email": "1shubh.singh.it@gmail.com",
+      "password": "sldfj78dsf",
+      "social": {
+        "facebook": "1https://www.facebook.com/iamshubhsingh/",
+        "linkedin": "1https://www.linkedin.com/in/shubham-singh-er/",
+        "twitter": "1https://twitter.com/Shubham47880959"
+      },
+      "lat": 70.43483,
+      "long": -50.17801,
+      "photo": "1https://pbs.twimg.com/profile_images/1287709234017087488/XPfYWMFm_400x400.jpg",
+      "gender": "m",
+      "profession": "1Software Enginner",
+      "maritalStatus": "0y",
+      "income": 90000,
+      "education": {
+        "highSchool": "01/02/2014",
+        "inter": "01/02/2015",
+        "ug": "01/02/2016",
+        "pg": "01/02/2020"
+      },
+      "foodHabits": [],
+      "pets": [],
+      "socialWelfare": [],
+      "volunteer": "",
+      "music": [],
+      "registeredAt": "01/08/2020",
+      "updatedAt": "01/08/2020"
+    },
+    {
+      "id": 5,
+      "dob": "16/12/1997",
+      "name": "Shubham Singh",
+      "email": "1shubh.singh.it@gmail.com",
+      "password": "sldfj78dsf",
+      "social": {
+        "facebook": "1https://www.facebook.com/iamshubhsingh/",
+        "linkedin": "1https://www.linkedin.com/in/shubham-singh-er/",
+        "twitter": "1https://twitter.com/Shubham47880959"
+      },
+      "lat": -17.84436,
+      "long": -14.43146,
+      "photo": "1https://pbs.twimg.com/profile_images/1287709234017087488/XPfYWMFm_400x400.jpg",
+      "gender": "m",
+      "profession": "1Software Enginner",
+      "maritalStatus": "0y",
+      "income": 90000,
+      "education": {
+        "highSchool": "01/02/2014",
+        "inter": "01/02/2015",
+        "ug": "01/02/2016",
+        "pg": "01/02/2020"
+      },
+      "foodHabits": [],
+      "pets": [],
+      "socialWelfare": [],
+      "volunteer": "",
+      "music": [],
+      "registeredAt": "01/08/2020",
+      "updatedAt": "01/08/2020"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "dob": "16-12-1997",
+      "name": "Shubham Singh",
+      "email": "shubh.singh.it@gmail.com",
+      "password": "abcdef",
+      "lat": 0,
+      "long": 0
+    },
+    {
+      "id": 2,
+      "dob": "06-09-2020",
+      "email": "shubh@gmail.com",
+      "name": "Divya",
+      "password": "abcdef"
+    },
+    {
+      "id": "1599400042679",
+      "dob": "06-09-2020",
+      "email": "shubhamsingh@gmail.com",
+      "name": "shubham",
+      "password": "aaaaa"
+    },
+    {
+      "id": "1599400166338",
+      "dob": "06-09-2020",
+      "email": "ffh@dgdfg",
+      "name": "dfsfsdfs",
+      "password": "aaaaaaaa"
+    },
+    {
+      "id": "1599400373948",
+      "dob": "06-09-2020",
+      "email": "ffh@dgdfg",
+      "name": "dhfghfghfh",
+      "password": "aaaaa"
+    }
+  ]
+}
